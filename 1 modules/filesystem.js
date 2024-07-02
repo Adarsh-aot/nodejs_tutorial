@@ -4,11 +4,14 @@
 const fs = require("fs")
 
 const consoleFileDataSync = ()=>{
+    console.log("start")
     const fileData = fs.readFileSync("./sample.json")
     console.log(fileData)
+    console.log("end")
 }
 
 const consoleFileData = ()=>{
+    console.log("start")
     fs.readFile("./sample.json",(err,data)=>{
         if(err){
             console.log(err)
@@ -16,4 +19,8 @@ const consoleFileData = ()=>{
         }
         console.log(data)
     })
+    console.log("end")
 }
+
+// consoleFileDataSync()
+consoleFileData()
